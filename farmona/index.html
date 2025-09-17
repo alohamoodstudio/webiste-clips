@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Demo dla Farmona</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        background: #029f21;
+        font-family: "Segoe UI", Arial, sans-serif;
+      }
+      body {
+        min-height: 100vh;
+        min-height: 100dvh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .card {
+        background: #fff;
+        border-radius: 20px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+        padding: 32px 24px;
+        max-width: 350px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .video-box {
+        width: 100%;
+        aspect-ratio: 9 / 16;
+        background: #ddd;
+        border-radius: 16px;
+        overflow: hidden;
+        margin-bottom: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 16px;
+        background: #222;
+        outline: none;
+      }
+      .text {
+        text-align: center;
+        margin-bottom: 18px;
+        color: #222;
+        font-size: 1.1rem;
+        line-height: 1.5;
+      }
+      .buttons {
+        display: flex;
+        gap: 14px;
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .btn {
+        background-color: #ff9900;
+        color: #fff;
+        border: none;
+        outline: none;
+        padding: 12px 20px;
+        border-radius: 50px;
+        text-decoration: none;
+        font-size: 1rem;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        cursor: pointer;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        transition: background 0.2s;
+      }
+      .btn:hover,
+      .btn:active,
+      .btn:focus {
+        background: #ec8700;
+      }
+      /* Player controls stylizacja (dla natywnych kontrolki video) */
+      video::-webkit-media-controls-panel {
+        background-color: #ff9900 !important;
+      }
+      @media (max-width: 600px) {
+        .card {
+          padding: 18px 6px;
+          max-width: 96vw;
+        }
+        .video-box {
+          border-radius: 8px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <div class="video-box">
+        <video
+          src="Demo-Farmona.mp4"
+          controls
+          playsinline
+          style="background: #000"
+          poster="miniatura.jpg"
+        ></video>
+        <!-- Podmień src na rzeczywisty klip, i opcjonalnie miniaturę-->
+      </div>
+      <div class="text">
+        Demo dla <b>Farmona</b><br />
+        Poznaj nasz styl pracy – klip przykładowy.
+      </div>
+      <div class="buttons">
+        <a
+          class="btn"
+          href="mailto:kontakt@alohamood.pl?subject=Kontakt%20w%20sprawie%20współpracy%20Farmona"
+          target="_blank"
+          >Napisz do nas</a
+        >
+        <a class="btn" href="link-do-briefa.pdf" target="_blank"
+          >Pobierz brief PDF</a
+        >
+      </div>
+    </div>
+  </body>
+</html>
